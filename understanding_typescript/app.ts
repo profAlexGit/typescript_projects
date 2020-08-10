@@ -1,10 +1,17 @@
-function add(num1: number, num2: number):number {
-	return num1 + num2;
+function add(num1: number, num2: number, printResult: boolean, phrase: string) {
+
+	const result = num1 + num2;
+	if (printResult) {
+		console.log(phrase + result);
+	} else {
+		return result;
+	}
 }
 
 const number1 = 5;
 const number2 = 2.8;
+const printResult = true;
+const resultPhrase = 'Result is: ';
 
-const result:number = add(number1, number2);
 
-console.log(`result: ${result}`);
+add(number1, number2, printResult, resultPhrase);
